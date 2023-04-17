@@ -40,4 +40,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build GSI
         run: |
-          
+          cd Erfan* && bash url2GSI.sh ${{ github.event.inputs.auth }} Generic -b
