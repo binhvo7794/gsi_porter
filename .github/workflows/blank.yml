@@ -33,8 +33,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Setup Tools and Environment
         run: |
-          sudo apt-get update -y && sudo apt-get upgrade -y && apt install python-pip python3-pip -y
-          git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git && cd ErfanGSIs && bash setup.sh && sed -i '143i\    *"13"*) flag=true' make.sh
+          git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git && cd ErfanGSIs && sudo bash setup.sh && sed -i '143i\    *"13"*) flag=true' make.sh
           cp -r roms/12 roms/13
           cp -r prebuilt/12 prebuilt/13
           cp -r prebuilt/vendor_vndk/make12.sh prebuilt/vendor_vndk/make13.sh
